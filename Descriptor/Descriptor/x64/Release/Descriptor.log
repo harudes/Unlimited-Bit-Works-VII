@@ -1,0 +1,9 @@
+﻿  Descriptor.cpp
+c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(86): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(95): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Generando código
+  35 of 512 functions ( 6.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    30 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  Descriptor.vcxproj -> C:\Users\Luis\Desktop\Descriptor\x64\Release\Descriptor.exe

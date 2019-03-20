@@ -1,0 +1,4 @@
+﻿  Descriptor.cpp
+c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(37): warning C4018: '<': no coinciden signed/unsigned
+c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(38): error C2446: ==': no hay conversión de 'const char *' en 'int'
+  c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(38): note: No existe un contexto en el que sea posible realizar esta conversión

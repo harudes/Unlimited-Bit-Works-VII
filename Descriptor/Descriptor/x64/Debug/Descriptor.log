@@ -1,0 +1,4 @@
+﻿  Descriptor.cpp
+c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(86): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luis\desktop\descriptor\descriptor\descriptor.cpp(95): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Descriptor.vcxproj -> C:\Users\Luis\Desktop\Descriptor\x64\Debug\Descriptor.exe
