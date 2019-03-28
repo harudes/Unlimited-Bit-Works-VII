@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1553482072 source:c:\users\luis\desktop\quadtree\src\quadtree.cpp
+	<iostream>
+	"QuadTree.h"
+
+1553462427 c:\users\luis\desktop\quadtree\include\quadtree.h
+	<vector>
+	<Point.h>
+
+1553482038 source:c:\users\luis\desktop\quadtree\main.cpp
+	<windows.h>
+	<iostream>
+	<math.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<time.h>
+	<QuadTree.h>
+	<fstream>
+	<thread>
+
+976692172 c:\users\luis\downloads\quadtree\glut\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1543279152 c:\users\luis\desktop\quadtree\include\point.h
+	<iostream>
+	<math.h>
+
+1553479120 source:c:\users\luis\desktop\quadtree\src\point.cpp
+	"Point.h"
+
+1543323195 source:c:\users\luis\desktop\quadtree\src\rtree.cpp
+	"RTree.h"
+
+1543271251 c:\users\luis\desktop\quadtree\include\rtree.h
+	<vector>
+	<math.h>
+	<Point.h>
+	<Rectangle.h>
+	<queue>
+	<iostream>
+
+1541376347 source:c:\users\luis\desktop\quadtree\src\quadrilateral.cpp
+	"Quadrilateral.h"
+
+1541376443 c:\users\luis\desktop\quadtree\include\quadrilateral.h
+
+1543280931 source:c:\users\luis\desktop\quadtree\src\rectangle.cpp
+	"Rectangle.h"
+
+1543280768 c:\users\luis\desktop\quadtree\include\rectangle.h
+	<Point.h>
+
