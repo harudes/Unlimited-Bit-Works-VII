@@ -39,7 +39,7 @@ bool QuadTree::searchPoint(Point punto, QuadTree *&qt){
         return findPoint(points,punto);
     else{
         qt=(regions[punto.region(midX,midY)]);
-        return regions[punto.region(midX,midY)]->searchPoint(punto,qt);
+        return qt->searchPoint(punto,qt);
     }
 }
 
@@ -70,7 +70,7 @@ Point QuadTree::leftdown() {
     return Point(minX, minY);
 }
 Point QuadTree::rightdown() {
-    return Point(minX, minY);
+    return Point(maxX, minY);
 }
 
 bool QuadTree::inRegion(Point punto, float distancia) {
@@ -86,9 +86,7 @@ bool QuadTree::inRegion(Point punto, float distancia) {
 vector<Point> QuadTree::getPoints(){
     vector<Point> puntos;
     if (!regions[0]) {
-        for (size_t i = 0; i < points.size(); ++i) {
-                puntos.push_back(points[i]);
-        }
+        puntos.insert(puntos.end(),points.begin(),points.end());
     }
     else {
         vector<Point> aux;

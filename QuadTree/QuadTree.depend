@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1553482072 source:c:\users\luis\desktop\quadtree\src\quadtree.cpp
+1554076869 source:c:\users\luis\desktop\quadtree\src\quadtree.cpp
 	<iostream>
 	"QuadTree.h"
 
@@ -7,7 +7,7 @@
 	<vector>
 	<Point.h>
 
-1553482038 source:c:\users\luis\desktop\quadtree\main.cpp
+1554007646 source:c:\users\luis\desktop\quadtree\main.cpp
 	<windows.h>
 	<iostream>
 	<math.h>
@@ -23,11 +23,11 @@
 	<GL/gl.h>
 	<GL/glu.h>
 
-1543279152 c:\users\luis\desktop\quadtree\include\point.h
+1554068039 c:\users\luis\desktop\quadtree\include\point.h
 	<iostream>
 	<math.h>
 
-1553479120 source:c:\users\luis\desktop\quadtree\src\point.cpp
+1554068029 source:c:\users\luis\desktop\quadtree\src\point.cpp
 	"Point.h"
 
 1543323195 source:c:\users\luis\desktop\quadtree\src\rtree.cpp
