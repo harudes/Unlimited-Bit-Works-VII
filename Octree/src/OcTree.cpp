@@ -38,6 +38,7 @@ bool OcTree::searchPoint(Point punto, OcTree *&ot){
     if(!regions[0])
         return findPoint(points,punto);
     else{
+        ot=(regions[punto.region(midX,midY,midZ)]);
         return ot->searchPoint(punto,ot);
     }
 }
@@ -65,17 +66,32 @@ vector<Point> OcTree::getPoints(){
 	return puntos;
 }
 
-vector<Line> OcTree::getPointLines(){
+vector<Line> OcTree::getBorderLines(){
     vector<Line> lines;
-    if (!regions[0]) {
-        for (size_t i = 0; i < points.size(); ++i) {
-                lines.push_back(Line(points[i],Point(midX,midY,midZ)));
-        }
-    }
-    else {
-        vector<Line> aux;
-        for (int i = 0; i < 8; ++i) {
-            aux = regions[i]->getPointLines();
+    Point
+        a(maxX,minY,minZ),
+        b(minX,minY,minZ),
+        c(maxX,maxY,minZ),
+        d(minX,maxY,minZ),
+        e(maxX,minY,maxZ),
+        f(minX,minY,maxZ),
+        g(maxX,maxY,maxZ),
+        h(minX,maxY,maxZ);
+    if(regions[0]){
+        lines.push_back(Line(a,b));
+        lines.push_back(Line(c,d));
+        lines.push_back(Line(e,f));
+        lines.push_back(Line(g,h));
+        lines.push_back(Line(a,e));
+        lines.push_back(Line(b,f));
+        lines.push_back(Line(c,g));
+        lines.push_back(Line(d,h));
+        lines.push_back(Line(a,c));
+        lines.push_back(Line(b,d));
+        lines.push_back(Line(e,g));
+        lines.push_back(Line(f,h));
+        for(int i=0;i<8;++i){
+            vector<Line> aux=regions[i]->getBorderLines();
             lines.insert(lines.end(),aux.begin(),aux.end());
         }
     }
@@ -102,6 +118,114 @@ vector<Line> OcTree::getLines(){
     }
     return lines;
 }
+
+bool OcTree::onCircle(Point punto, float distancia){
+    bool result=true;
+    vector<vector<coordenada> > ps;
+    vector<coordenada> p1={minX,minY,minZ};
+    vector<coordenada> p2={maxX,maxY,maxZ};
+    ps.push_back(p1);
+    ps.push_back(p2);
+    for(int i=0; i<2;++i){
+        for(int j=0;j<2;++j){
+            for(int k=0; k<2; ++k){
+                Point p(ps[i][0],ps[j][1],ps[k][2]);
+                result = result && (euclidean(punto,p)<=distancia);
+            }
+        }
+    }
+    return result;
+}
+
+bool OcTree::corner(Point punto, float distancia){
+    bool result=false;
+    vector<vector<coordenada> > ps;
+    vector<coordenada> p1={minX,minY,minZ};
+    vector<coordenada> p2={maxX,maxY,maxZ};
+    ps.push_back(p1);
+    ps.push_back(p2);
+    for(int i=0; i<2;++i){
+        for(int j=0;j<2;++j){
+            for(int k=0; k<2; ++k){
+                Point p(ps[i][0],ps[j][1],ps[k][2]);
+                result = result || (euclidean(punto,p)<=distancia);
+            }
+        }
+    }
+    return result;
+}
+
+bool OcTree::inCube(Point punto){
+    bool result=true;
+    vector<vector<coordenada> > ps;
+    vector<coordenada> p1={minX,minY,minZ};
+    vector<coordenada> p2={maxX,maxY,maxZ};
+    vector<coordenada> p={punto.x,punto.y,punto.z};
+    ps.push_back(p1);
+    ps.push_back(p2);
+    for(int i=0; i<ps[0].size();++i){
+        result = result && (p[i]>p1[i]);
+        result = result && (p[i]<p2[i]);
+    }
+    return result;
+}
+
+bool OcTree::outCube(Point punto, float distancia){
+    bool result=false;
+    vector<vector<coordenada> > ps;
+    vector<coordenada> p1={minX,minY,minZ};
+    vector<coordenada> p2={maxX,maxY,maxZ};
+    vector<coordenada> p={punto.x,punto.y,punto.z};
+    ps.push_back(p1);
+    ps.push_back(p2);
+    for(int i=0; i<ps[0].size();++i){
+        result = result || (p[i]<p1[i] && (p[i]+distancia)>p1[i]);
+        result = result || (p[i]>p2[i] && (p[i]-distancia)<p2[i]);
+    }
+    return result;
+}
+
+bool OcTree::inRegion(Point punto, float distancia){
+    bool result=false;
+    if(corner(punto,distancia)){
+        result=true;
+    }
+    else{
+        if(inCube(punto)){
+            result = true;
+        }
+        else{
+            if(outCube(punto,distancia)){
+                result = true;
+            }
+        }
+    }
+    return result;
+}
+
+vector<Point> OcTree::cercanos(Point centro, float radio){
+    vector<Point> puntos;
+    if(onCircle(centro,radio)){
+        return getPoints();
+    }
+    else if(inRegion(centro, radio)){
+        if (!regions[0]) {
+            for (size_t i = 0; i < points.size(); ++i) {
+                if (euclidean(points[i], centro) <= radio)
+                    puntos.push_back(points[i]);
+            }
+        }
+        else {
+            vector<Point> aux;
+            for (int i = 0; i < 8; ++i) {
+                aux = regions[i]->cercanos(centro, radio);
+                puntos.insert(puntos.end(),aux.begin(),aux.end());
+            }
+        }
+    }
+    return puntos;
+}
+
 
 OcTree::~OcTree(){
     //dtor

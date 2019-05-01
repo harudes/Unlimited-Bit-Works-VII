@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1554076243 source:c:\users\luis\desktop\octree\main.cpp
+1556417486 source:c:\users\luis\desktop\octree\main.cpp
 	<windows.h>
 	<iostream>
 	<math.h>
@@ -7,16 +7,18 @@
 	"OcTree.h"
 	<stdlib.h>
 	<time.h>
+	<chrono>
+	<fstream>
 
 976692172 c:\users\luis\downloads\quadtree\glut\include\gl\glut.h
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
 
-1554075341 source:c:\users\luis\desktop\octree\src\octree.cpp
+1556147421 source:c:\users\luis\desktop\octree\src\octree.cpp
 	"OcTree.h"
 
-1554072488 c:\users\luis\desktop\octree\include\octree.h
+1556147303 c:\users\luis\desktop\octree\include\octree.h
 	<vector>
 	<Point.h>
 

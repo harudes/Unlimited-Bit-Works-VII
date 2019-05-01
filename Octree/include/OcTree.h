@@ -20,7 +20,13 @@ public:
     void insertPoint(Point punto, OcTree * p);
     vector<Point> getPoints();
     vector<Line> getLines();
-    vector<Line> getPointLines();
+    vector<Line> getBorderLines();
+    bool onCircle(Point punto, float distancia);
+	bool inRegion(Point punto, float distancia);
+	bool inCube(Point punto);
+	bool outCube(Point punto, float distancia);
+	bool corner(Point punto, float distancia);
+	vector<Point> cercanos(Point centro, float radio);
     virtual ~OcTree();
 };
 
