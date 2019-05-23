@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1556426104 source:c:\users\luis\desktop\kdtree\src\kdtree.cpp
+	"KDTree.h"
+
+1556424160 c:\users\luis\desktop\kdtree\include\kdtree.h
+	<Point.h>
+	<algorithm>
+	<utility>
+	<chrono>
+
+1555985125 c:\users\luis\desktop\kdtree\include\point.h
+	<vector>
+	<stdlib.h>
+	<iostream>
+
+1556426151 source:c:\users\luis\desktop\kdtree\src\point.cpp
+	"Point.h"
+
+1556426104 source:c:\users\luis\desktop\kdtree\main.cpp
+	<windows.h>
+	<iostream>
+	<math.h>
+	<GL/glut.h>
+	<KDTree.h>
+	<stdlib.h>
+	<time.h>
+	<fstream>
+
+976692172 c:\users\luis\downloads\quadtree\glut\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
