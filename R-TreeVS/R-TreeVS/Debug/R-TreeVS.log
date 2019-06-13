@@ -1,0 +1,10 @@
+﻿  RTree.cpp
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(146): warning C4018: '>': no coinciden signed/unsigned
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(235): warning C4018: '>': no coinciden signed/unsigned
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(249): warning C4018: '>': no coinciden signed/unsigned
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(344): warning C4018: '<': no coinciden signed/unsigned
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(359): warning C4018: '<': no coinciden signed/unsigned
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(398): warning C4018: '<': no coinciden signed/unsigned
+  main.cpp
+  Generando código...
+  R-TreeVS.vcxproj -> C:\Users\luisf\Desktop\R-TreeVS\Debug\R-TreeVS.exe

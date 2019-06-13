@@ -1,0 +1,28 @@
+﻿  RTree.cpp
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(69): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(70): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(99): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(159): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(160): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\luisf\desktop\r-treevs\r-treevs\rtree.cpp(189): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  main.cpp
+  rectangle.cpp
+  Generando código...
+main.obj : error LNK2019: símbolo externo __imp_glutInit sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutInitDisplayMode sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutInitWindowPosition sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutInitWindowSize sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutMainLoop sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutCreateWindow sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutPostRedisplay sin resolver al que se hace referencia en la función "void __cdecl idle(void)" (?idle@@YAXXZ)
+main.obj : error LNK2019: símbolo externo __imp_glutSwapBuffers sin resolver al que se hace referencia en la función "void __cdecl glPaint(void)" (?glPaint@@YAXXZ)
+main.obj : error LNK2019: símbolo externo __imp_glutDisplayFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutReshapeFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutKeyboardFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutMouseFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutMotionFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutIdleFunc sin resolver al que se hace referencia en la función main
+main.obj : error LNK2019: símbolo externo __imp_glutSolidSphere sin resolver al que se hace referencia en la función "void __cdecl drawSphere(void)" (?drawSphere@@YAXXZ)
+main.obj : error LNK2019: símbolo externo __imp_glutSolidCube sin resolver al que se hace referencia en la función "void __cdecl drawPoints2(void)" (?drawPoints2@@YAXXZ)
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\VS\lib\x64\glut32.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Users\luisf\Desktop\R-TreeVS\x64\Debug\R-TreeVS.exe : fatal error LNK1120: 16 externos sin resolver
